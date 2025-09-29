@@ -29,4 +29,9 @@
     .prymary .col-lg-6:last-of-type{
         margin-right: -50px !important;
     }
+    footer .col-lg-6, footer .container, footer p, footer ul{
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
