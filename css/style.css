@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+body {
+  background-image: url(..//img/blog/negative.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -1;
+    font-family: "Merriweather", serif;
+    font-optical-sizing: auto;
+}
+.coffee .row .col-lg-12{
+    background-image: url(..//img/blog/homebg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 25px;
+}
+.cookies .row .col-lg-12{
+    background-image: url(..//img/sutemenyek/cookies.jpg);
+    background-repeat: no-repeat;
+    background-position:center center;
+    background-size: cover;
+    border-radius: 25px;
+}
+header, footer{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+header ul{
+    justify-content: space-between;
+}
+ul li{
+    list-style-type: none;
+}
+header ul li{
+    padding: 0;
+    margin: 26px 15px 15px 15px;
+}
+footer li{
+    padding-left: 20px;
+    display:inline-block;
+}
+footer p {
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    cursor:pointer;
+    color: #0bbb76;
+}
+nav li:first-of-type a:hover, nav li:last-of-type a:hover{
+    border-bottom: 1px solid #0bbb76;
+}
+body, header a, footer a{
+    color: #fff;
+}
+nav a {
+    font-size: 25px;
+    padding: 5px 21px;
+}
+nav li:first-of-type a, nav li:last-of-type a{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.801);
+    border-radius: 10px;
+}
+body, header a{
+    color: #fff;
+}
+.coffee .row .col-lg-12, .cookies .row .col-lg-12{
+    width: 100%;
+    height: 320px;
+}
+.coffee .row .col-lg-12 div, .cookies .row .col-lg-12 div{
+    width: 45%;
+}
+.cookies .row .col-lg-12 div{
+    float: right;
+}
+.coffee .row .col-lg-12 div ul:last-of-type, .cookies .row .col-lg-12 div ul:last-of-type{
+    padding: 0px;
+}
+.ertekeles, .star{
+    margin: 10px;
+}
+.coffee .row .col-lg-12 div .ertekeles:first-of-type, .cookies .row .col-lg-12 div .ertekeles:first-of-type{
+    margin: 10px 10px 10px 0px;
+}
+.coffee .row .col-lg-12 div .ertekeles a i, .cookies .row .col-lg-12 div .ertekeles a i, .star a i{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+.tooltip-text{
+    visibility: hidden;
+    background-color: rgb(29, 34, 22);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.ertekeles:hover .tooltip-text, .star:hover .tooltip-text{
+  visibility: visible;
+  opacity: 1;
+}
+.coffee .row .col-lg-12 div .ertekeles .tooltip-text, .cookies .row .col-lg-12 div .ertekeles .tooltip-text{  
+    margin-top: -39px;
+}
+.kavek .col-lg-3, .sutik .col-lg-3{
+  padding: 0px 70px;
+}
+.back-content p{
+    margin-top: -45px;
+}
+.card {
+  overflow: visible;
+  width: 190px;
+  height: 254px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms;
+  box-shadow: 0px 0px 10px 1px #000000ee;
+  border-radius: 5px;
+}
+
+.front, .back {
+  background-color: #151515;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.back::before {
+  position: absolute;
+  content: ' ';
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+  animation: rotation_481 5000ms infinite linear;
+}
+
+.back-content {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  background-color: #151515;
+  border-radius: 5px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.card:hover .content {
+  transform: rotateY(180deg);
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  0% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.front {
+  transform: rotateY(180deg);
+  color: white;
+}
+
+.front .front-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.front-content .badge {
+  background-color: #00000055;
+  padding: 2px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(2px);
+  width: fit-content;
+}
+
+.description {
+  box-shadow: 0px 0px 10px 5px #00000088;
+  width: 100%;
+  padding: 10px;
+  background-color: #00000099;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 20px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title p {
+  width: 50%;
+}
+
+.card-footer {
+  color: #ffffff88;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #ffbb66;
+  position: relative;
+  filter: blur(15px);
+  animation: floating 2600ms infinite linear;
+}
+
+#bottom {
+  background-color: #ff8866;
+  left: 50px;
+  top: 0px;
+  width: 150px;
+  height: 150px;
+  animation-delay: -800ms;
+}
+
+#right {
+  background-color: #ff2233;
+  left: 160px;
+  top: -80px;
+  width: 30px;
+  height: 30px;
+  animation-delay: -1800ms;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+.green{
+    color: #0bbb76;
+}
+img{
+    border-radius: 10px;
+}
+.prymary{
+  background-color: rgba(0, 0, 0, 0.50);
+  border: 1px solid #fff;
+  border-radius: 20px;
+}
+.star .tooltip-text{
+  margin-top: -65px;
+}
+.back-content img {
+  align-items: left;
+}
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+main{
+  padding-top: 100px !important;
+}
+.kep img{
+  float: right;
+  width: 45%;
+}
+
+/* From Uiverse.io by gharsh11032000 */ 
+.form-container {
+  width: 400px;
+  background: linear-gradient(#212121, #212121) padding-box,linear-gradient(145deg, transparent 35%,#ffbb66, #0bbb76) border-box;
+  border: 2px solid transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #717171;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #ffbb66;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #ffbb66;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #717171;
+  font-weight: 600;
+  width: 30%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: 20px;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+/* From Uiverse.io by aguerquin */ 
+.rating > label {
+  margin-right: 4px;
+}
+
+.rating:not(:checked) > input {
+  display: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.rating:not(:checked) > label > svg {
+  fill: #666;
+  transition: fill 0.3s ease;
+}
+
+.rating > input:checked ~ label > svg {
+  fill: #ffa723;
+}
+
+.rating:not(:checked) > label:hover ~ label > svg,
+.rating:not(:checked) > label:hover > svg {
+  fill: #ff9e0b;
+}
+
+#star1:hover ~ label > svg,
+#star1:hover > svg {
+  fill: #a23c3c !important;
+}
+
+#star2:hover ~ label > svg,
+#star2:hover > svg {
+  fill: #99542d !important;
+}
+
+#star3:hover ~ label > svg,
+#star3:hover > svg {
+  fill: #9f7e18 !important;
+}
+
+#star4:hover ~ label > svg,
+#star4:hover > svg {
+  fill: #22885e !important;
+}
+
+#star5:hover ~ label > svg,
+#star5:hover > svg {
+  fill: #7951ac !important;
+}
+
+#star1:checked ~ label > svg {
+  fill: #ef4444;
+}
+
+#star2:checked ~ label > svg {
+  fill: #e06c2b;
+}
+
+#star3:checked ~ label > svg {
+  fill: #eab308;
+}
+
+#star4:checked ~ label > svg {
+  fill: #19c37d;
+}
+
+#star5:checked ~ label > svg {
+  fill: #ab68ff;
+}
+iframe{
+  width: 100%;
+  border-radius: 25px;
+}
+.form-container{
+  margin: 0 auto;
+}
